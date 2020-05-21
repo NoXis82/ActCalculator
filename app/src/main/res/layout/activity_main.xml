@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorView"
+        android:gravity="end|center_vertical"
+        android:hint="@string/value"
+        android:maxLength="10"
+        android:textColor="@color/numberColor"
+        android:textColorHint="@color/numberColor"
+        android:textSize="@android:dimen/notification_large_icon_height"
+        android:typeface="serif" />
+
+    <LinearLayout
+        android:id="@+id/action_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/divBtn"
+            layout="@layout/buttons_type_2" />
+
+        <include
+            android:id="@+id/multiBtn"
+            layout="@layout/buttons_type_2" />
+
+        <include
+            android:id="@+id/minusBtn"
+            layout="@layout/buttons_type_2" />
+
+        <include
+            android:id="@+id/plusBtn"
+            layout="@layout/buttons_type_2" />
+
+        <include
+            android:id="@+id/equalBtn"
+            layout="@layout/buttons_type_2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/action_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_toStartOf="@+id/action_2">
+
+        <Button
+            android:id="@+id/clearBtn"
+            android:background="@drawable/buttons_type_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="clearClick"
+            android:textSize="@android:dimen/notification_large_icon_width"/>
+
+        <Button
+            android:id="@+id/symbolBtn"
+            android:background="@drawable/buttons_type_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="signChange"
+            android:textSize="@android:dimen/notification_large_icon_width"/>
+
+        <Button
+            android:id="@+id/percentBtn"
+            android:background="@drawable/buttons_type_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="percentClick"
+            android:textSize="@android:dimen/notification_large_icon_width"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/numbers_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/action_1"
+        android:layout_toStartOf="@+id/action_2">
+
+        <include
+            android:id="@+id/numberBtn_7"
+
+            layout="@layout/button_number" />
+
+        <include
+            android:id="@+id/numberBtn_8"
+            layout="@layout/button_number" />
+
+        <include
+            android:id="@+id/numberBtn_9"
+            layout="@layout/button_number" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/numbers_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numbers_1"
+        android:layout_toStartOf="@+id/action_2">
+
+        <include
+            android:id="@+id/numberBtn_4"
+            layout="@layout/button_number" />
+
+        <include
+            android:id="@+id/numberBtn_5"
+            layout="@layout/button_number" />
+
+        <include
+            android:id="@+id/numberBtn_6"
+            layout="@layout/button_number" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/numbers_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numbers_2"
+        android:layout_toStartOf="@+id/action_2">
+
+        <include
+            android:id="@+id/numberBtn_1"
+            layout="@layout/button_number" />
+
+        <include
+            android:id="@+id/numberBtn_2"
+            layout="@layout/button_number" />
+
+        <include
+            android:id="@+id/numberBtn_3"
+            layout="@layout/button_number" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numbers_3"
+        android:layout_toStartOf="@+id/action_2">
+
+        <include
+            android:id="@+id/numberBtn_0"
+            layout="@layout/button_0" />
+
+        <include
+            android:id="@+id/pointBtn"
+            layout="@layout/button_number" />
+    </LinearLayout>
+</RelativeLayout>
